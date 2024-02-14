@@ -1,0 +1,60 @@
+.sort_box_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+ul#filter_dropdown {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul#filter_dropdown1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sort_box{
+  margin: 2px 4px;
+}
+
+.content-box {
+  border: 2px solid #ff4500;
+  align-items: center;
+  margin: 5px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h2.detail_title{
+  text-align: center;
+}
+
+.content {
+  display: flex;
+}
+.field-literal {
+  margin: 5px;
+}
+.minisis-field {
+  text-align: start;
+  margin: 5px;
+}
+
+.explanation {
+  font-size: 30px;
+  font-style: inherit;
+}
+
+.field-literal .explanation {
+  text-align: right;
+}
+.minisis-field .explanation {
+  text-align: left;
+}
+#summary input[type=checkbox]{
+  display:none;
+}

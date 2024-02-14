@@ -1,0 +1,53 @@
+<!-- include virtual="[DON_ROOT]header.html"-->
+
+<div class="container">
+  <div class="adv_content">
+    <form class="adv_form" method="post" action="^HOME_SESSID^?unionsearch&APPLICATION=UNION_VIEW&language=144&DATABASE=RESTAURANT&ERRMSG=[DON_ROOT]error.html">
+      <!--      CL1 + B01 + CL2 + B02 + CL3          -->
+
+      <!-- CL #1 -->
+      <input class="adv_input" type="text" name="RES_CITY_CL" placeholder="City..." />
+
+      <!-- Boolean -->
+      <select name="B01" id="B01">
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+        <option value="AND NOT">NOT</option>
+      </select>
+
+      <!-- CL #2 -->
+      <input class="adv_input" type="text" name="RES_NAME_CL" placeholder="Name..." />
+
+      <!-- Boolean -->
+      <select class="adv_input" name="B02" id="B02">
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+        <option value="AND NOT">NOT</option>
+      </select>
+
+      <!-- CL #3 -->
+      <div class="adv_idx_box">
+        <input class="adv_input" type="text" name="RES_SPECIAL_CL" placeholder="Specialty..." />
+        <button id="res_speciality_index" type="button" class="adv_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Index</button>
+      </div>
+
+      <!-- Boolean -->
+      <select class="adv_input" name="B02" id="B02">
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+        <option value="AND NOT">NOT</option>
+      </select>
+
+      <div style="display: flex">
+        <input type="checkbox" value="RES_SPECIAL_CL Korean" name="RES_SPECIAL_EXP1" size="1" /><span>Korean</span> <input type="checkbox" value="RES_SPECIAL_CL Italian" name="RES_SPECIAL_EXP2" size="1" /><span>Italian</span>
+        <input type="checkbox" value="RES_SPECIAL_CL Chineses" name="RES_SPECIAL_EXP3" size="1" /><span>Chinese</span>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- include virtual="[DON_ROOT]modal.html"-->
+<!-- include virtual="[DON_ROOT]scripts.html"-->
+<!-- include virtual="[DON_ROOT]footer.html"-->

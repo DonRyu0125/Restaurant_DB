@@ -1,0 +1,55 @@
+<!-- include virtual="[DON_ROOT]header.html"-->
+
+<!-- virtual dir  -->
+
+<!-- container > content > box -->
+<div class="container">
+  <div class="adv_content">
+    <form class="adv_form" method="post" action="^HOME_SESSID^?unionsearch&APPLICATION=UNION_VIEW&language=144&DATABASE=RES_CHEF&ERRMSG=[DON_ROOT]error.html">
+      <!--      CL1 + B01 + CL2 + B02 + CL3          -->
+
+      <!-- CL #1 -->
+      <input class="adv_input" type="text" name="RES_CHEF_NAME_CL" placeholder="Chef..." />
+
+      <!-- Boolean -->
+      <select class="adv_input" name="B01" id="B01">
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+        <option value="AND NOT">NOT</option>
+      </select>
+
+      <!-- CL #2 -->
+      <input class="adv_input" type="text" name="RES_CHEF_EDU_CL" placeholder="Edu..." />
+
+<!--     
+      <select class="adv_input" name="B02" id="B02">
+        <option value="AND">AND</option>
+        <option value="OR">OR</option>
+        <option value="AND NOT">NOT</option>
+      </select>
+
+      <div class="adv_idx_box">
+        <input class="adv_input" type="text" name="RES_CHEF_SPEC_CL" placeholder="Specility..." />
+        <button type="button" class="adv_btn">Index</button>
+      </div> -->
+
+      <div style="display: flex"><input type="checkbox" value="RES_CHEF_SPEC_CL Korean" name="CHEF_SPEC_EXP1" size="1" /><span>Korean</span></div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <form class="adv_form" method="post" action="^HOME_SESSID^?unionsearch&APPLICATION=UNION_VIEW&language=144&DATABASE=RES_CHEF&ERRMSG=[DON_ROOT]error.html">
+      <!-- FIELD OP -->
+      <input class="adv_input" type="text" name="RES_CHEF_SUM_CL" placeholder="Chef..." />
+      <select class="adv_input" name="F01" id="F01">
+        <option value="AND_WORD">All Keywords</option>
+        <option value="OR_WORD">Any Keywords</option>
+        <option value="ADJ_WORD">Exact Phrase</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- include virtual="[DON_ROOT]scripts.html"-->
+<!-- include virtual="[DON_ROOT]footer.html"-->

@@ -1,0 +1,22 @@
+.adv_form{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+
+.adv_content{
+    width: 70%;
+}
+
+.adv_input{
+    margin: 10px 0;
+    width: 100%;
+}
+
+.adv_btn{
+    margin: 10px 0;
+}
+
+.adv_idx_box{
+    display: flex;
+}
