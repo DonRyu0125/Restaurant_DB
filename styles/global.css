@@ -8,6 +8,9 @@ body {
   height: 80vh;
   /* margin: 0; */
 }
+h3{
+  margin-top: 20px;
+}
 
 .form-container {
   width: 300px;
@@ -24,6 +27,7 @@ body {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 40px;
   font-weight: 500;
   padding:20px;
@@ -39,4 +43,9 @@ body {
 
 .err_msg_box{
   text-align: center;
+}
+
+.btn.btn-primary a{
+  color: white;
+  text-decoration: none;
 }

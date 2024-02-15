@@ -72,3 +72,11 @@ button.bookmark-btn {
   position: absolute;
   right: 2px;
 }
+
+.filter-class {
+  margin-top: 20px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
