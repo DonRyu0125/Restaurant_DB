@@ -35,6 +35,8 @@ h2.detail_title{
 
 .content {
   display: flex;
+  align-items: center;
+  position: relative;
 }
 .field-literal {
   margin: 5px;
@@ -57,4 +59,16 @@ h2.detail_title{
 }
 #summary input[type=checkbox]{
   display:none;
+}
+#web_sum_form input[type=checkbox]{
+  display:none;
+}
+button.Delete-Bookmark {
+  height: 50px;
+  position: absolute;
+  right: 2px;
+}
+button.bookmark-btn {
+  position: absolute;
+  right: 2px;
 }
