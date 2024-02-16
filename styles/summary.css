@@ -57,10 +57,7 @@ h2.detail_title{
 .minisis-field .explanation {
   text-align: left;
 }
-#summary input[type=checkbox]{
-  display:none;
-}
-#web_sum_form input[type=checkbox]{
+.content input[type=checkbox]{
   display:none;
 }
 button.Delete-Bookmark {
