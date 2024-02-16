@@ -13,8 +13,7 @@ $("#listSearch").keypress(function (event) {
 $("#res_speciality_index").on("click", function () {
   // var url = HOME_SESSID + "/NEXT?INDEXLIST&FORM=[DON_ROOT]index_list.html&TRUNCATE=2&KEYVALUE=Korean&KEYNAME=RES_SPECIALITY&DATABASE=RESTAURANT&errmsg=[DON_ROOT]error.html";
 
-  var url = HOME_SESSID + "/FIRST?INDEXLIST&FORM=[DON_ROOT]index_list.html&KEYNAME=RES_SPECIALITY&DATABASE=RESTAURANT&errmsg=[DON_ROOT]error.html";
-
+  var url = HOME_SESSID + "/FIRST?INDEXLIST&FORM=[DON_ROOT]index_list.html&KEYNAME=RES_SPECIALITY&DATABASE=RESTAURANT&errmsg=[DON_ROOT]adv_search_error.html";
   load_index_page(url);
 });
 
@@ -40,6 +39,7 @@ function searchValue(form_id, request_url) {
   var jquery_form = "#" + form_id;
   var form_data = $(jquery_form).serialize();
 
+
   $.ajax({
     async: false,
     type: "POST",
@@ -48,8 +48,9 @@ function searchValue(form_id, request_url) {
     data: form_data,
     success: function (data) {
       if (data != "") {
-        // console.log(data);
-        $("#modal_id").replaceWith(data);
+        
+      $("#modal_id").empty();
+      $("#modal_id").append(data);
       } else {
         alert("[--Search key is not found--]");
       }
@@ -60,16 +61,16 @@ function searchValue(form_id, request_url) {
   });
 }
 
-function clusterButton(event, url) {
-  event.preventDefault();
-  event.stopPropagation();
-  // Need the logic for replacing the index list, prev next etc
+// function clusterButton(event, url) {
+//   event.preventDefault();
+//   event.stopPropagation();
+//   // Need the logic for replacing the index list, prev next etc
 
-  //  if url is not #, load page
-  if (url != "#") {
-    load_index_page(url);
-  }
-}
+//   //  if url is not #, load page
+//   if (url != "#") {
+//     load_index_page(url);
+//   }
+// }
 
 
 // Modal is not created yet
@@ -88,3 +89,4 @@ function SaveButton() {
 $("#exampleModal").on("hide.bs.modal", function () {
   $("#modal_id").empty();
 });
+
