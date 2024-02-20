@@ -57,3 +57,19 @@ h3{
   padding: 20px;
   border-radius: 10px 10px;
 }
+
+input[type="checkbox"] {
+  margin: 5px;
+}
+
+img{
+  height: 120px
+}
+
+.img_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0 20px;
+}
