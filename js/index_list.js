@@ -1,10 +1,10 @@
 let HOME_SESSID = getCookie("HOME_SESSID");
-$("#listSearch").keypress(function (event) {
-  if (event.which == "13") {
-    event.preventDefault();
-    event.stopPropagation();
-  }
-});
+// $("#listSearch").keypress(function (event) {
+//   if (event.which == "13") {
+//     event.preventDefault();
+//     event.stopPropagation();
+//   }
+// });
 
 // KEY NAME : MINISIS FIELDS EX) RES_SPECILITY
 // KEY VALUE: KOREAN, ITALIAN
