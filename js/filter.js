@@ -2,7 +2,6 @@ if ($("#filter_results").length) {
       if (document.getElementById("filter_xml") != null) {
         var filter_inner_xml = $("div").find("#filter_xml")[0].innerHTML;
         let filter_xml = "<filter_xml>\n" + filter_inner_xml + "</filter_xml>\n";
-        console.log(filter_xml);
         parser = new DOMParser();
         var xml_doc = parser.parseFromString(filter_xml, "text/xml");
         var filter_tag_list = xml_doc.getElementsByTagName("filter");
