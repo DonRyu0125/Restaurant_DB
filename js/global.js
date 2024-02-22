@@ -5,10 +5,7 @@ $(".bookmark-btn").on("click", function () {
   var form_string = '<form method="post" action="' + $(".web_sum_form").attr("data-action") + '"></form>';
   var myform = $(form_string);
   var input_field = '<input type="text" name="' + $(this).find("input").attr("name") + '" value="' + $(this).find("input").attr("value") + '">';
-  console.log("input==>", input_field);
   myform.append(input_field);
-  console.log("form==>", myform);
-  console.log("this", this);
   $("body").append(myform);
   // sumbit form
   $(myform).submit();
@@ -63,10 +60,8 @@ function goForward() {
 // CRU for restaurant record
 $( "#target" ).on( "click", function() {
   //op="chg": attribute to change the value at the xml
-
-
   // NONE VALUE + CREATE + NO OP= Y => MAKE NEW RECORD
-
+  //error ?manipxmlrecord&database=RESTAURANT&key=res_name&VALUE=Don_999&CREATE=Y  => not showing at the SMA
 
   let url = HOME_SESSID+`?manipxmlrecord&database=RESTAURANT&key=res_speciality&VALUE=Korean&REPLACE=Y`;
   var xmlForm = `<?xml version="1.0" encoding="UTF-8"?><RECORD><res_name>don_guys</res_name><res_speciality>American</res_speciality></RECORD>`;
