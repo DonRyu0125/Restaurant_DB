@@ -1,4 +1,4 @@
-let HOME_SESSID = getCookie("HOME_SESSID");
+// let HOME_SESSID = getCookie("HOME_SESSID");
 // $("#listSearch").keypress(function (event) {
 //   if (event.which == "13") {
 //     event.preventDefault();

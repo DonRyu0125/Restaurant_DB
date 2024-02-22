@@ -1,3 +1,4 @@
+let HOME_SESSID = getCookie("HOME_SESSID");
 $(".bookmark-btn").on("click", function () {
   console.log("clicked");
   // Create a form dynamically
@@ -58,3 +59,38 @@ function goBack() {
 function goForward() {
   window.history.forward();
 }
+
+// CRU for restaurant record
+$( "#target" ).on( "click", function() {
+  //op="chg": attribute to change the value at the xml
+
+
+  // NONE VALUE + CREATE + NO OP= Y => MAKE NEW RECORD
+
+
+  let url = HOME_SESSID+`?manipxmlrecord&database=RESTAURANT&key=res_speciality&VALUE=Korean&REPLACE=Y`;
+  var xmlForm = `<?xml version="1.0" encoding="UTF-8"?><RECORD><res_name>don_guys</res_name><res_speciality>American</res_speciality></RECORD>`;
+  $.ajax({
+    async: false,
+    type: "POST",
+    url: url,
+    contentType: "text/xml",
+    dataType: "xml",
+    data: xmlForm,
+    processData: false,
+    cache: false,
+    timeout: 300000,
+    success: function (data, textStatus, xhr) {
+      console.log('data================>',data)
+      if (jQuery.isXMLDoc(data)) {
+        //var xml_value = getXmlFieldValue(data, "error");
+        // if (xml_value != "" && parseInt(xml_value, 10) == 0) {
+        //   window.location.reload();
+        // }
+      }
+    },
+    error: function (e) {
+      console.error(e);
+    },
+  });
+});
